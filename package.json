@@ -13,7 +13,7 @@
   },
   "author": "Bespoken Tools",
   "dependencies": {
-    "bespoken-tools": "0.9.34",
+    "bespoken-tools": "0.9.41",
     "body-parser": "^1.15.2",
     "express": "^4.14.0"
   },

@@ -1,6 +1,6 @@
 var bst = require("bespoken-tools");
 
-var cloudFunction = function (request, response) {
+var simpleFunction = function (request, response) {
     var intent = request.body.result.metadata.intentName;
     console.log("Intent: " + intent);
 
@@ -24,4 +24,4 @@ var cloudFunction = function (request, response) {
     response.json(responseJSON);
 };
 
-exports.handler = bst.Logless.capture("d05a3ed5-9676-4ed5-80cb-32d572bd993b", cloudFunction);
+exports.simpleFunction = bst.Logless.capture("<YOUR_SECRET_KEY>", simpleFunction);
