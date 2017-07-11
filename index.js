@@ -1,6 +1,7 @@
 var bst = require("bespoken-tools");
+var functions = require("firebase-functions");
 
-var simpleFunction = function (request, response) {
+var simpleFunction = functions.https.onRequest(function (request, response) {
     var intent = request.body.result.metadata.intentName;
     console.log("Intent: " + intent);
 
@@ -22,6 +23,7 @@ var simpleFunction = function (request, response) {
     }
 
     response.json(responseJSON);
-};
+});
 
-exports.simpleFunction = bst.Logless.capture("<YOUR_SECRET_KEY>", simpleFunction);
+exports.simpleFunction = bst.Logless.capture("d05a3ed5-9676-4ed5-80cb-32d572bd993b", simpleFunction);
+// exports.simpleFunction = simpleFunction;
