@@ -1,0 +1,49 @@
+[debug] [2017-07-11T17:53:05.374Z] ----------------------------------------------------------------------
+[debug] [2017-07-11T17:53:05.377Z] Command:      /Users/jpk/.nvm/versions/node/v4.3.2/bin/node /Users/jpk/.nvm/versions/node/v4.3.2/bin/firebase deploy
+[debug] [2017-07-11T17:53:05.377Z] CLI Version:  3.9.1
+[debug] [2017-07-11T17:53:05.377Z] Platform:     darwin
+[debug] [2017-07-11T17:53:05.377Z] Node Version: v4.3.2
+[debug] [2017-07-11T17:53:05.378Z] Time:         Tue Jul 11 2017 13:53:05 GMT-0400 (EDT)
+[debug] [2017-07-11T17:53:05.378Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-11T17:53:05.390Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-11T17:53:05.390Z] > authorizing via signed-in user
+[debug] [2017-07-11T17:53:05.393Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/project-1112335853534624390  
+ Tue Jul 11 2017 13:53:05 GMT-0400 (EDT)
+[debug] [2017-07-11T17:53:06.453Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-11T17:53:06.454Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/project-1112335853534624390/tokens  
+ Tue Jul 11 2017 13:53:06 GMT-0400 (EDT)
+[debug] [2017-07-11T17:53:06.804Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'project-1112335853534624390'...
+[info] 
+[info] i  deploying functions
+[debug] [2017-07-11T17:53:07.680Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "bespoken-tools": "^1.0.1",
+    "firebase-admin": "~4.2.1",
+    "firebase-functions": "^0.5.7"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-07-11T17:53:07.681Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/project-1112335853534624390?view=CONSUMER_VIEW  
+ Tue Jul 11 2017 13:53:07 GMT-0400 (EDT)
+[debug] [2017-07-11T17:53:07.682Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/project-1112335853534624390?view=CONSUMER_VIEW  
+ Tue Jul 11 2017 13:53:07 GMT-0400 (EDT)
+[debug] [2017-07-11T17:53:08.350Z] <<< HTTP RESPONSE 200
+[info] ✔  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-07-11T17:53:08.425Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2017-07-11T17:53:08.427Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/project-1112335853534624390  
+ Tue Jul 11 2017 13:53:08 GMT-0400 (EDT)
+[debug] [2017-07-11T17:53:08.427Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/project-1112335853534624390/apiKeys  
+ Tue Jul 11 2017 13:53:08 GMT-0400 (EDT)
+[debug] [2017-07-11T17:53:08.746Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-11T17:53:08.907Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-07-11T17:53:12.409Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/project-1112335853534624390/configs  
+ Tue Jul 11 2017 13:53:12 GMT-0400 (EDT)

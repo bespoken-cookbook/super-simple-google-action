@@ -1,14 +1,17 @@
 var bst = require("bespoken-tools");
 var functions = require("firebase-functions");
+// [START all]
 
-var simpleFunction = functions.https.onRequest(function (request, response) {
+// [START trigger]
+var simpleFunction = function (request, response) {
+    // [END trigger]
     var intent = request.body.result.metadata.intentName;
     console.log("Intent: " + intent);
 
     var responseJSON = {
         data: null,
         contextOut: null,
-        source: "SuperSimpleGH"
+        source: "SuperSimpleGoogleAction"
     }
 
     if (intent === "Default Welcome Intent") {
@@ -23,7 +26,7 @@ var simpleFunction = functions.https.onRequest(function (request, response) {
     }
 
     response.json(responseJSON);
-});
-
-exports.simpleFunction = bst.Logless.capture("d05a3ed5-9676-4ed5-80cb-32d572bd993b", simpleFunction);
+};
+// [END all]
+exports.simpleFunction = functions.https.onRequest(bst.Logless.capture("d05a3ed5-9676-4ed5-80cb-32d572bd993b", simpleFunction));
 // exports.simpleFunction = simpleFunction;
