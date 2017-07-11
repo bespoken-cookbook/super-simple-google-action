@@ -1,10 +1,7 @@
 var bst = require("bespoken-tools");
 var functions = require("firebase-functions");
-// [START all]
 
-// [START trigger]
 var simpleFunction = function (request, response) {
-    // [END trigger]
     var intent = request.body.result.metadata.intentName;
     console.log("Intent: " + intent);
 
@@ -27,6 +24,6 @@ var simpleFunction = function (request, response) {
 
     response.json(responseJSON);
 };
-// [END all]
+
 exports.simpleFunction = functions.https.onRequest(bst.Logless.capture("d05a3ed5-9676-4ed5-80cb-32d572bd993b", simpleFunction));
 // exports.simpleFunction = simpleFunction;
