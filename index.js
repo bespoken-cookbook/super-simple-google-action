@@ -1,6 +1,7 @@
 var bst = require("bespoken-tools");
 
 var simpleFunction = function (request, response) {
+    console.log("Body: " + JSON.stringify(request.body));
     var intent = request.body.result.metadata.intentName;
     console.log("Intent: " + intent);
 

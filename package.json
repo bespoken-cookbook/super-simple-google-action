@@ -15,7 +15,9 @@
   "dependencies": {
     "bespoken-tools": "0.9.43",
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "firebase-admin": "^4.2.1",
+    "firebase-functions": "^0.5.9"
   },
   "engines": {
     "node": "6.3"

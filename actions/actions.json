@@ -1,0 +1,37 @@
+{
+  "actions": [
+    {
+      "name": "MAIN",
+      "intent": {
+        "name": "actions.intent.MAIN"
+      },
+      "fulfillment": {
+        "conversationName": "sekai-app"
+      }
+    },
+    {
+      "name": "BUY",
+      "intent": {
+        "name": "com.example.sekai.BUY",
+        "parameters": [{
+          "name": "color",
+          "type": "SchemaOrg_Color"
+        }],
+        "trigger": {
+          "queryPatterns": [
+            "find shoe"
+          ]
+        }
+      },
+      "fulfillment": {
+        "conversationName": "sekai-app"
+      }
+    }
+  ],
+  "conversations": {
+    "sekai-app": {
+      "name": "sekai-app",
+      "url": "https://determined-rice.bespoken.link"
+    }
+  }
+}
